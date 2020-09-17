@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Слайдер фото</title>
+</head>
+<body>
+
+
+<div id="slider">
+    <div class="img-container">
+        <img src="img/1.jpg" alt="Слайд 1">
+        <img src="img/2.jpg" alt="Слайд 2">
+        <img src="img/3.jpg" alt="Слайд 3">
+        <img src="img/4.jpg" alt="Слайд 4">
+        <img src="img/5.jpg" alt="Слайд 5">
+        <img src="img/6.jpg" alt="Слайд 6">
+    </div>
+</div>
+
+
+<script src="main.js"></script>
+
+<style>
+
+    body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background: bisque; /* fallback for old browsers */
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
+
+    #slider {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .img-container {
+        display: flex;
+        object-fit: cover;
+        transition: transform 0.3s linear;
+        transform: translateX(0);
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+    #slider .img-container > img {
+        min-width: 100vw;
+        min-height: 100vh;
+        object-fit: cover;
+    }
+
+</style>
+
+</body>
+
+</html>
